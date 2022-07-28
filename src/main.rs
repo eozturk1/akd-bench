@@ -16,10 +16,10 @@ type Blake3 = Blake3_256<BaseElement>;
 const LABEL_VALUE_SIZE_BYTES: usize = 32;
 
 /// Number of key entries in a large batch.
-const LARGE_BATCH_SIZE: u64 = 100;
+const LARGE_BATCH_SIZE: u64 = 100000;
 
 /// Number of epochs equal to numebr of publish operations.
-const NUM_EPOCHS: u64 = 10;
+const NUM_EPOCHS: u64 = 101;
 
 #[tokio::main]
 

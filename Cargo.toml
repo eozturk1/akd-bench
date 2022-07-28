@@ -6,8 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-akd_mysql = "0.6"
-akd = "0.6"
+#akd_mysql = "0.6"
+#akd = "0.6"
 mysql_async = "0.29"
 winter-crypto = "0.2"
 winter-math = "0.2"
@@ -15,3 +15,12 @@ winter-utils = "0.2"
 bytes = "1.1.0"
 log = "0.4.14"
 tokio = { version = "1.10", features = ["full"] }
+
+[dependencies.akd]
+git = "https://github.com/novifinancial/akd"
+branch = "main"
+features = ["serde_serialization"]
+
+[dependencies.akd_mysql]
+git = "https://github.com/novifinancial/akd"
+branch = "main"
