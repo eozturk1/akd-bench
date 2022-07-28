@@ -1,14 +1,13 @@
-
-use akd_mysql::mysql::*;
 use akd::ecvrf::HardCodedAkdVRF;
-use std::time::Instant;
 use akd::storage::Storage;
-use winter_math::fields::f128::BaseElement;
-use winter_crypto::hashers::Blake3_256;
-use akd::Directory;
 use akd::AkdLabel;
-use bytes::{BufMut, BytesMut};
 use akd::AkdValue;
+use akd::Directory;
+use akd_mysql::mysql::*;
+use bytes::{BufMut, BytesMut};
+use std::time::Instant;
+use winter_crypto::hashers::Blake3_256;
+use winter_math::fields::f128::BaseElement;
 
 type Blake3 = Blake3_256<BaseElement>;
 
@@ -30,6 +29,8 @@ async fn main() {
 pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
     if !AsyncMySqlDatabase::test_guard() {
         panic!("Docker container not running?");
+    } else {
+        println!("Container running.");
     }
     let mysql_db = AsyncMySqlDatabase::new(
         "localhost",
@@ -41,6 +42,7 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
         200,
     )
     .await;
+    println!("Got database connection!");
 
     // Pre clean-up.
     if let Err(error) = mysql_db.delete_data().await {
@@ -59,8 +61,12 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
     }
 }
 
-
-pub async fn publish_multi_epoch<S: Storage + Sync + Send>(db: &S, batch_size: u64, num_epoch: u64) {
+pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
+    db: &S,
+    batch_size: u64,
+    num_epoch: u64,
+) {
+    println!("Publishing...");
     // AKD Setup
     let vrf = HardCodedAkdVRF {};
     let akd = Directory::new::<Blake3>(db, &vrf, false).await.unwrap();
