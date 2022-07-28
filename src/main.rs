@@ -106,19 +106,19 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
             .await
             .unwrap();
 
-        update_table_sizes();
-        if let Some(table_sizes_output) = run_table_sizes_command() {
-            println!("Table sizes:\n{}", table_sizes_output);
-        } else {
-            panic!("Table sizes command failed!");
-        }
-
         // Measure elapsed time for publish operation.
         let elapsed = now.elapsed().as_millis() as f64;
         println!(
             "Elapsed time for publishing keys in range [{}, {}]: {} ms.",
             publish_index_start, publish_index_end, elapsed
         );
+
+        update_table_sizes();
+        if let Some(table_sizes_output) = run_table_sizes_command() {
+            println!("Table sizes:\n{}", table_sizes_output);
+        } else {
+            panic!("Table sizes command failed!");
+        }
 
         wtr.write_record(&[
             publish_index_start.to_string(),
