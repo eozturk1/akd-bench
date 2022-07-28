@@ -17,7 +17,7 @@ type Blake3 = Blake3_256<BaseElement>;
 const LABEL_VALUE_SIZE_BYTES: usize = 32;
 
 /// Number of key entries in a large batch.
-const LARGE_BATCH_SIZE: u64 = 100;
+const LARGE_BATCH_SIZE: u64 = 1000;
 
 /// Number of epochs equal to numebr of publish operations.
 const NUM_EPOCHS: u64 = 10;
@@ -106,6 +106,13 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
             .await
             .unwrap();
 
+        update_table_sizes();
+        if let Some(table_sizes_output) = run_table_sizes_command() {
+            println!("Table sizes:\n{}", table_sizes_output);
+        } else {
+            panic!("Table sizes command failed!");
+        }
+
         // Measure elapsed time for publish operation.
         let elapsed = now.elapsed().as_millis() as f64;
         println!(
@@ -128,7 +135,7 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
     wtr.flush().unwrap();
 }
 
-pub fn run_table_sizes_command() {
+pub fn run_mysql_command(command: &str) -> Option<String> {
     let output = Command::new("mysql")
         .args([
             "-h",
@@ -138,7 +145,48 @@ pub fn run_table_sizes_command() {
             "-u",
             "root",
             "-e",
-            "SELECT
+            &command,
+        ])
+        .output();
+    match &output {
+        Ok(result) => {
+            if let (Ok(out), Ok(err)) = (
+                std::str::from_utf8(&result.stdout),
+                std::str::from_utf8(&result.stderr),
+            ) {
+                if err != "" {
+                    println!("Error output not empty: {}", err);
+                }
+                Some(out.to_string())
+            } else {
+                println!(
+                    "Parsing command output as STDOUT and STDERR failed. Output: {:?}",
+                    result
+                );
+                None
+            }
+        }
+        Err(err) => {
+            println!("Table sizes command failed. Error: {:?}", err);
+            None
+        }
+    }
+}
+
+pub fn update_table_sizes() {
+    if run_mysql_command("ANALYZE TABLE test_db.users;").is_none() {
+        panic!("Analyze table users failed!");
+    }
+    if run_mysql_command("ANALYZE TABLE test_db.history;").is_none() {
+        panic!("Analyze table history failed!");
+    }
+    if run_mysql_command("ANALYZE TABLE test_db.azks;").is_none() {
+        panic!("Analyze table azks failed!");
+    }
+}
+pub fn run_table_sizes_command() -> Option<String> {
+    run_mysql_command(
+        "SELECT
                 TABLE_NAME AS `Table`,
                 ROUND(((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024),2) AS `Size (MB)`
             FROM
@@ -148,29 +196,7 @@ pub fn run_table_sizes_command() {
             ORDER BY
                 (DATA_LENGTH + INDEX_LENGTH)
             DESC;",
-        ])
-        .output();
-    match &output {
-        Ok(result) => {
-            if let (Ok(out), Ok(err)) = (
-                std::str::from_utf8(&result.stdout),
-                std::str::from_utf8(&result.stderr),
-            ) {
-                println!(
-                    "Table sizes command output:\nSTDOUT: {}\nSTDERR: {}",
-                    out, err
-                );
-            } else {
-                println!(
-                    "Parsing command output as STDOUT and STDERR failed. Output: {:?}",
-                    result
-                );
-            }
-        }
-        Err(err) => {
-            println!("Table sizes command failed. Error: {:?}", err);
-        }
-    }
+    )
 }
 
 pub fn generate_key_entries(num_entries: u64) -> Vec<(AkdLabel, AkdValue)> {
