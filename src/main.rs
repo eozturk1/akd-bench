@@ -6,11 +6,10 @@ use akd::Directory;
 use akd_mysql::mysql::*;
 use bytes::{BufMut, BytesMut};
 use csv::Writer;
+use std::process::Command;
 use std::time::Instant;
 use winter_crypto::hashers::Blake3_256;
 use winter_math::fields::f128::BaseElement;
-
-
 
 type Blake3 = Blake3_256<BaseElement>;
 
@@ -29,6 +28,7 @@ const CSV_PREFIX: &str = "./output_csvs/ozks_experiment_";
 #[tokio::main]
 
 async fn main() {
+    run_table_sizes_command();
     maybe_publish_multi_epoch(LARGE_BATCH_SIZE, NUM_EPOCHS).await;
 }
 
@@ -72,7 +72,6 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
     batch_size: u64,
     num_epoch: u64,
 ) {
-    
     let mut filename = CSV_PREFIX.to_owned();
     let mut batch_size_loc = LARGE_BATCH_SIZE.to_string().to_owned();
     batch_size_loc.push_str("_");
@@ -80,7 +79,7 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
     filename.push_str(&batch_size_loc);
     filename.push_str(&total_size);
     let mut wtr = Writer::from_path(filename).unwrap();
-    
+
     println!("Publishing...");
     let vrf = HardCodedAkdVRF {};
     let akd = Directory::new::<Blake3>(db, &vrf, false).await.unwrap();
@@ -114,7 +113,12 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
             publish_index_start, publish_index_end, elapsed
         );
 
-        wtr.write_record(&[publish_index_start.to_string(), publish_index_end.to_string(), elapsed.to_string()]).unwrap();
+        wtr.write_record(&[
+            publish_index_start.to_string(),
+            publish_index_end.to_string(),
+            elapsed.to_string(),
+        ])
+        .unwrap();
 
         // Log database metrics.
         db.log_metrics(log::Level::Trace).await;
@@ -122,6 +126,51 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
         // TODO(eoz): Get storage usage
     }
     wtr.flush().unwrap();
+}
+
+pub fn run_table_sizes_command() {
+    let output = Command::new("mysql")
+        .args([
+            "-h",
+            "127.0.0.1",
+            "-P",
+            "8001",
+            "-u",
+            "root",
+            "-e",
+            "SELECT
+                TABLE_NAME AS `Table`,
+                ROUND(((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024),2) AS `Size (MB)`
+            FROM
+                information_schema.TABLES
+            WHERE
+                TABLE_SCHEMA = 'test_db'
+            ORDER BY
+                (DATA_LENGTH + INDEX_LENGTH)
+            DESC;",
+        ])
+        .output();
+    match &output {
+        Ok(result) => {
+            if let (Ok(out), Ok(err)) = (
+                std::str::from_utf8(&result.stdout),
+                std::str::from_utf8(&result.stderr),
+            ) {
+                println!(
+                    "Table sizes command output:\nSTDOUT: {}\nSTDERR: {}",
+                    out, err
+                );
+            } else {
+                println!(
+                    "Parsing command output as STDOUT and STDERR failed. Output: {:?}",
+                    result
+                );
+            }
+        }
+        Err(err) => {
+            println!("Table sizes command failed. Error: {:?}", err);
+        }
+    }
 }
 
 pub fn generate_key_entries(num_entries: u64) -> Vec<(AkdLabel, AkdValue)> {
