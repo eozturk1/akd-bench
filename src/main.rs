@@ -5,9 +5,12 @@ use akd::AkdValue;
 use akd::Directory;
 use akd_mysql::mysql::*;
 use bytes::{BufMut, BytesMut};
+use csv::Writer;
 use std::time::Instant;
 use winter_crypto::hashers::Blake3_256;
 use winter_math::fields::f128::BaseElement;
+
+
 
 type Blake3 = Blake3_256<BaseElement>;
 
@@ -15,10 +18,13 @@ type Blake3 = Blake3_256<BaseElement>;
 const LABEL_VALUE_SIZE_BYTES: usize = 32;
 
 /// Number of key entries in a large batch.
-const LARGE_BATCH_SIZE: u64 = 100000;
+const LARGE_BATCH_SIZE: u64 = 100;
 
 /// Number of epochs equal to numebr of publish operations.
-const NUM_EPOCHS: u64 = 101;
+const NUM_EPOCHS: u64 = 10;
+
+/// csv file name to be prepended for the data
+const CSV_PREFIX: &str = "./output_csvs/ozks_experiment_";
 
 #[tokio::main]
 
@@ -66,8 +72,16 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
     batch_size: u64,
     num_epoch: u64,
 ) {
+    
+    let mut filename = CSV_PREFIX.to_owned();
+    let mut batch_size_loc = LARGE_BATCH_SIZE.to_string().to_owned();
+    batch_size_loc.push_str("_");
+    let total_size = (LARGE_BATCH_SIZE * NUM_EPOCHS).to_string().to_owned();
+    filename.push_str(&batch_size_loc);
+    filename.push_str(&total_size);
+    let mut wtr = Writer::from_path(filename).unwrap();
+    
     println!("Publishing...");
-    // AKD Setup
     let vrf = HardCodedAkdVRF {};
     let akd = Directory::new::<Blake3>(db, &vrf, false).await.unwrap();
 
@@ -100,11 +114,14 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
             publish_index_start, publish_index_end, elapsed
         );
 
+        wtr.write_record(&[publish_index_start.to_string(), publish_index_end.to_string(), elapsed.to_string()]).unwrap();
+
         // Log database metrics.
-        db.log_metrics(log::Level::Error).await;
+        db.log_metrics(log::Level::Trace).await;
 
         // TODO(eoz): Get storage usage
     }
+    wtr.flush().unwrap();
 }
 
 pub fn generate_key_entries(num_entries: u64) -> Vec<(AkdLabel, AkdValue)> {
