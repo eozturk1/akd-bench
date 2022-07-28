@@ -115,24 +115,48 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
 
         update_table_sizes();
         if let Some(table_sizes_output) = run_table_sizes_command() {
+            // Output format
+            // Table   Size (MB)
+            // history 4.41
+            // users   1.52
+            // azks    0.02
             println!("Table sizes:\n{}", table_sizes_output);
+            let lines = table_sizes_output.trim().split("\n");
+            // Split by line (skip the line with column names).
+            let mut tables_and_sizes_to_log = Vec::new();
+            for line in lines.skip(1) {
+                // \t is the separator between the columns.
+                let tables_or_sizes = line.split("\t").collect::<Vec<_>>();
+                if tables_or_sizes.len() != 2 {
+                    panic!("2 columns should be there for a table (history, user, or azks) and its size. Current len: {}", tables_or_sizes.len());
+                }
+                tables_and_sizes_to_log.push(tables_or_sizes[0]);
+                tables_and_sizes_to_log.push(tables_or_sizes[1]);
+            }
+            if tables_and_sizes_to_log.len() != 6 {
+                panic!("6 elements should be there for a table (history, user, or azks) and their sizes. Current len: {}. Extra or missing tbales?", tables_and_sizes_to_log.len());
+            }
+            // Log the data into the CSV.
+            wtr.write_record(&[
+                publish_index_start.to_string(),
+                publish_index_end.to_string(),
+                elapsed.to_string(),
+                tables_and_sizes_to_log[0].to_string(),
+                tables_and_sizes_to_log[1].to_string(),
+                tables_and_sizes_to_log[2].to_string(),
+                tables_and_sizes_to_log[3].to_string(),
+                tables_and_sizes_to_log[4].to_string(),
+                tables_and_sizes_to_log[5].to_string(),
+            ])
+            .unwrap();
+            wtr.flush().unwrap();
         } else {
             panic!("Table sizes command failed!");
         }
 
-        wtr.write_record(&[
-            publish_index_start.to_string(),
-            publish_index_end.to_string(),
-            elapsed.to_string(),
-        ])
-        .unwrap();
-
         // Log database metrics.
         db.log_metrics(log::Level::Trace).await;
-
-        // TODO(eoz): Get storage usage
     }
-    wtr.flush().unwrap();
 }
 
 pub fn run_mysql_command(command: &str) -> Option<String> {
