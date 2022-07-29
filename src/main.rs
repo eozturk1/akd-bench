@@ -10,9 +10,11 @@ use rand::Rng;
 use rand::distributions::Alphanumeric;
 use rand::thread_rng;
 use std::process::Command;
+use std::time::Duration;
 use std::time::Instant;
 use winter_crypto::hashers::Blake3_256;
 use winter_math::fields::f128::BaseElement;
+use akd_mysql::mysql::MySqlCacheOptions::Specific;
 
 type Blake3 = Blake3_256<BaseElement>;
 
@@ -47,7 +49,7 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
         Option::from("root"),
         Option::from("example"),
         Option::from(8001),
-        MySqlCacheOptions::Default,
+        Specific(Duration::new(120, 0)),
         200,
     )
     .await;
