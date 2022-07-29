@@ -6,6 +6,9 @@ use akd::Directory;
 use akd_mysql::mysql::*;
 use bytes::{BufMut, BytesMut};
 use csv::Writer;
+use rand::Rng;
+use rand::distributions::Alphanumeric;
+use rand::thread_rng;
 use std::process::Command;
 use std::time::Instant;
 use winter_crypto::hashers::Blake3_256;
@@ -44,7 +47,7 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
         Option::from("root"),
         Option::from("example"),
         Option::from(8001),
-        MySqlCacheOptions::None,
+        MySqlCacheOptions::Default,
         200,
     )
     .await;
@@ -224,20 +227,29 @@ pub fn run_table_sizes_command() -> Option<String> {
 }
 
 pub fn generate_key_entries(num_entries: u64) -> Vec<(AkdLabel, AkdValue)> {
-    let mut label = BytesMut::with_capacity(LABEL_VALUE_SIZE_BYTES);
-    let mut value = BytesMut::with_capacity(LABEL_VALUE_SIZE_BYTES);
+    // generate the test data
+    let mut rng = thread_rng();
 
-    (0..num_entries)
-        .map(|i| {
-            label.put_u64(i);
-            label.resize(LABEL_VALUE_SIZE_BYTES, 0u8);
-            let l = label.split().freeze();
+    let mut users: Vec<String> = vec![];
+    for _ in 0..num_entries {
+        users.push(
+            thread_rng()
+                .sample_iter(&Alphanumeric)
+                .take(32)
+                .map(char::from)
+                .collect(),
+        );
+    }
+    
+    let mut data = Vec::new();
+    let fake_value = 42;
+    for value in users.iter() {
 
-            value.put_u64(i);
-            value.resize(LABEL_VALUE_SIZE_BYTES, 0u8);
-            let v = value.split().freeze();
-
-            (AkdLabel(l.to_vec()), AkdValue(v.to_vec()))
-        })
-        .collect()
+        data.push((
+            AkdLabel::from_utf8_str(value),
+            AkdValue(format!("{:?}", value).as_bytes().to_vec()),
+        ));
+    }
+    data
+   
 }

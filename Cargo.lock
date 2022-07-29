@@ -57,6 +57,7 @@ dependencies = [
  "csv",
  "log",
  "mysql_async",
+ "rand 0.8.5",
  "tokio",
  "winter-crypto",
  "winter-math",

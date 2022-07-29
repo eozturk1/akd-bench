@@ -16,6 +16,7 @@ bytes = "1.1.0"
 log = "0.4.14"
 tokio = { version = "1.10", features = ["full"] }
 csv = "1.0.0-beta.2"
+rand = "0.8.5"
 
 [dependencies.akd]
 git = "https://github.com/novifinancial/akd"
