@@ -20,9 +20,11 @@ rand = "0.8.5"
 
 [dependencies.akd]
 git = "https://github.com/novifinancial/akd"
-branch = "main"
+#branch = "main"
+rev = "b571a7ee9e3b29102e26dfe9aaec6afe003b5310"
 features = ["serde_serialization"]
 
 [dependencies.akd_mysql]
 git = "https://github.com/novifinancial/akd"
-branch = "main"
+#branch = "main"
+rev = "b571a7ee9e3b29102e26dfe9aaec6afe003b5310"
