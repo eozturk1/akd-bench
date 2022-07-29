@@ -229,9 +229,6 @@ pub fn run_table_sizes_command() -> Option<String> {
 }
 
 pub fn generate_key_entries(num_entries: u64) -> Vec<(AkdLabel, AkdValue)> {
-    let mut label = BytesMut::with_capacity(LABEL_VALUE_SIZE_BYTES);
-    let mut value = BytesMut::with_capacity(LABEL_VALUE_SIZE_BYTES);
-
     // generate the test data
     let mut rng = thread_rng();
 
