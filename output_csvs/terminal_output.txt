@@ -1,0 +1,180 @@
+Container running.
+Got database connection!
+Publishing...
+***********************************************************
+Elapsed time for publishing keys in range [0, 100000]: 1041958 ms.
+Table sizes:
+Table	Size (MB)
+users	34.66
+history	23.59
+azks	0.02
+states	0.02
+
+MySQL writes: 500002, MySQL reads: 2, Time read: 7.869011791 s, Time write: 801.702830623 s
+	Tree size: 199999
+	Node state count: 200000
+	Value state count: 100000
+Read call stats: [("get_direct:~Azks", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4), ("internal_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [100000, 200000]: 1455531 ms.
+Table sizes:
+Table	Size (MB)
+history	142.00
+users	58.75
+azks	0.02
+states	0.02
+
+MySQL writes: 700221, MySQL reads: 1, Time read: 9.992536708 s, Time write: 1178.541077082 s
+	Tree size: 399999
+	Node state count: 475550
+	Value state count: 200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [200000, 300000]: 1716787 ms.
+Table sizes:
+Table	Size (MB)
+history	179.98
+users	81.88
+azks	0.02
+states	0.02
+
+MySQL writes: 814602, MySQL reads: 19, Time read: 51.19919487 s, Time write: 1382.746708082 s
+	Tree size: 599999
+	Node state count: 800109
+	Value state count: 300000
+Read call stats: [("batch_get~HistoryNodeState", 8), ("batch_get~HistoryTreeNode", 8), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [300000, 400000]: 2061722 ms.
+Table sizes:
+Table	Size (MB)
+history	220.95
+users	104.95
+azks	0.02
+states	0.02
+
+MySQL writes: 895821, MySQL reads: 47, Time read: 245.489236608 s, Time write: 1524.033568457 s
+	Tree size: 799999
+	Node state count: 1161090
+	Value state count: 400000
+Read call stats: [("batch_get~HistoryNodeState", 22), ("batch_get~HistoryTreeNode", 22), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [400000, 500000]: 2234079 ms.
+Table sizes:
+Table	Size (MB)
+history	262.94
+users	128.98
+azks	0.02
+states	0.02
+
+MySQL writes: 959770, MySQL reads: 49, Time read: 291.98745298 s, Time write: 1641.496644956 s
+	Tree size: 999999
+	Node state count: 1551435
+	Value state count: 500000
+Read call stats: [("batch_get~HistoryNodeState", 23), ("batch_get~HistoryTreeNode", 23), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [500000, 600000]: 2366601 ms.
+Table sizes:
+Table	Size (MB)
+history	304.94
+users	152.00
+azks	0.02
+states	0.02
+
+MySQL writes: 1010330, MySQL reads: 49, Time read: 328.827280027 s, Time write: 1731.698435582 s
+	Tree size: 1199999
+	Node state count: 1965430
+	Value state count: 600000
+Read call stats: [("batch_get~HistoryNodeState", 23), ("batch_get~HistoryTreeNode", 23), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [600000, 700000]: 2490816 ms.
+Table sizes:
+Table	Size (MB)
+history	348.92
+users	175.00
+azks	0.02
+states	0.02
+
+MySQL writes: 1055454, MySQL reads: 49, Time read: 362.132123733 s, Time write: 1815.766646915 s
+	Tree size: 1399999
+	Node state count: 2400691
+	Value state count: 700000
+Read call stats: [("batch_get~HistoryNodeState", 23), ("batch_get~HistoryTreeNode", 23), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [700000, 800000]: 2589470 ms.
+Table sizes:
+Table	Size (MB)
+history	392.92
+users	197.98
+azks	0.02
+states	0.02
+
+MySQL writes: 1093189, MySQL reads: 51, Time read: 391.563091276 s, Time write: 1881.055810457 s
+	Tree size: 1599999
+	Node state count: 2853867
+	Value state count: 800000
+Read call stats: [("batch_get~HistoryNodeState", 24), ("batch_get~HistoryTreeNode", 24), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [800000, 900000]: 2677671 ms.
+Table sizes:
+Table	Size (MB)
+history	434.92
+users	220.98
+azks	0.02
+states	0.02
+
+MySQL writes: 1125745, MySQL reads: 51, Time read: 417.081092193 s, Time write: 1938.789786458 s
+	Tree size: 1799999
+	Node state count: 3322678
+	Value state count: 900000
+Read call stats: [("batch_get~HistoryNodeState", 24), ("batch_get~HistoryTreeNode", 24), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [900000, 1000000]: 2768445 ms.
+Table sizes:
+Table	Size (MB)
+history	474.92
+users	244.98
+azks	0.02
+states	0.02
+
+MySQL writes: 1157985, MySQL reads: 51, Time read: 444.3962519 s, Time write: 1997.822303539 s
+	Tree size: 1999999
+	Node state count: 3806942
+	Value state count: 1000000
+Read call stats: [("batch_get~HistoryNodeState", 24), ("batch_get~HistoryTreeNode", 24), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************
+Elapsed time for publishing keys in range [1000000, 1100000]: 2839356 ms.
+Table sizes:
+Table	Size (MB)
+history	515.92
+users	267.97
+azks	0.02
+states	0.02
+
+MySQL writes: 1183545, MySQL reads: 51, Time read: 463.687648151 s, Time write: 2046.307591583 s
+	Tree size: 2199999
+	Node state count: 4303534
+	Value state count: 1100000
+Read call stats: [("batch_get~HistoryNodeState", 24), ("batch_get~HistoryTreeNode", 24), ("get_direct:~HistoryNodeState", 1), ("get_direct:~HistoryTreeNode", 1), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 4)]
+
+***********************************************************

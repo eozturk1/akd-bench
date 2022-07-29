@@ -21,16 +21,15 @@ type Blake3 = Blake3_256<BaseElement>;
 const LABEL_VALUE_SIZE_BYTES: usize = 32;
 
 /// Number of key entries in a large batch.
-const LARGE_BATCH_SIZE: u64 = 1000;
+const LARGE_BATCH_SIZE: u64 = 100000;
 
 /// Number of epochs equal to numebr of publish operations.
-const NUM_EPOCHS: u64 = 10;
+const NUM_EPOCHS: u64 = 101;
 
 /// csv file name to be prepended for the data
 const CSV_PREFIX: &str = "./output_csvs/azks_experiment_";
 
 #[tokio::main]
-
 async fn main() {
     run_table_sizes_command();
     maybe_publish_multi_epoch(LARGE_BATCH_SIZE, NUM_EPOCHS).await;
@@ -48,7 +47,7 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
         Option::from("root"),
         Option::from("example"),
         Option::from(8001),
-        Specific(Duration::new(120, 0)),
+        Specific(Duration::new(1200, 0)),
         2000,
     )
     .await;
