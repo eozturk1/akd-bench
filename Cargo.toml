@@ -16,12 +16,17 @@ bytes = "1.1.0"
 log = "0.4.14"
 tokio = { version = "1.10", features = ["full"] }
 csv = "1.0.0-beta.2"
+rand = "0.8.5"
 
 [dependencies.akd]
 git = "https://github.com/novifinancial/akd"
-branch = "main"
+#branch = "main"
+#rev = "0b5737c9e4d00a752ad0faad8631e96204806d5d"
+rev = "4c6dafa8fc238e802a2828725994b7cb2ade7350"
 features = ["serde_serialization"]
 
 [dependencies.akd_mysql]
 git = "https://github.com/novifinancial/akd"
-branch = "main"
+#rev = "0b5737c9e4d00a752ad0faad8631e96204806d5d"
+rev = "4c6dafa8fc238e802a2828725994b7cb2ade7350"
+#branch = "main"

@@ -7,9 +7,12 @@ use akd_mysql::mysql::*;
 use bytes::{BufMut, BytesMut};
 use csv::Writer;
 use std::process::Command;
+// use std::time::Duration;
 use std::time::Instant;
 use winter_crypto::hashers::Blake3_256;
 use winter_math::fields::f128::BaseElement;
+use rand::distributions::Alphanumeric;
+use rand::{thread_rng, Rng};
 
 type Blake3 = Blake3_256<BaseElement>;
 
@@ -23,7 +26,7 @@ const LARGE_BATCH_SIZE: u64 = 1000;
 const NUM_EPOCHS: u64 = 10;
 
 /// csv file name to be prepended for the data
-const CSV_PREFIX: &str = "./output_csvs/ozks_experiment_";
+const CSV_PREFIX: &str = "./output_csvs/azks_experiment_";
 
 #[tokio::main]
 
@@ -44,8 +47,8 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
         Option::from("root"),
         Option::from("example"),
         Option::from(8001),
-        MySqlCacheOptions::None,
-        200,
+        MySqlCacheOptions::None,//Specific(Duration::new(120, 0)),
+        2000,
     )
     .await;
     println!("Got database connection!");
@@ -133,8 +136,8 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
                 tables_and_sizes_to_log.push(tables_or_sizes[0]);
                 tables_and_sizes_to_log.push(tables_or_sizes[1]);
             }
-            if tables_and_sizes_to_log.len() != 6 {
-                panic!("6 elements should be there for a table (history, user, or azks) and their sizes. Current len: {}. Extra or missing tbales?", tables_and_sizes_to_log.len());
+            if tables_and_sizes_to_log.len() != 8 {
+                panic!("8 elements should be there for a table (history, user, or azks) and their sizes. Current len: {}. Extra or missing tbales?", tables_and_sizes_to_log.len());
             }
             // Log the data into the CSV.
             wtr.write_record(&[
@@ -147,6 +150,8 @@ pub async fn publish_multi_epoch<S: Storage + Sync + Send>(
                 tables_and_sizes_to_log[3].to_string(),
                 tables_and_sizes_to_log[4].to_string(),
                 tables_and_sizes_to_log[5].to_string(),
+                tables_and_sizes_to_log[6].to_string(),
+                tables_and_sizes_to_log[7].to_string(),
             ])
             .unwrap();
             wtr.flush().unwrap();
@@ -227,17 +232,29 @@ pub fn generate_key_entries(num_entries: u64) -> Vec<(AkdLabel, AkdValue)> {
     let mut label = BytesMut::with_capacity(LABEL_VALUE_SIZE_BYTES);
     let mut value = BytesMut::with_capacity(LABEL_VALUE_SIZE_BYTES);
 
-    (0..num_entries)
-        .map(|i| {
-            label.put_u64(i);
-            label.resize(LABEL_VALUE_SIZE_BYTES, 0u8);
-            let l = label.split().freeze();
+    // generate the test data
+    let mut rng = thread_rng();
 
-            value.put_u64(i);
-            value.resize(LABEL_VALUE_SIZE_BYTES, 0u8);
-            let v = value.split().freeze();
+    let mut users: Vec<String> = vec![];
+    for _ in 0..num_entries {
+        users.push(
+            thread_rng()
+                .sample_iter(&Alphanumeric)
+                .take(32)
+                .map(char::from)
+                .collect(),
+        );
+    }
+    
+    let mut data = Vec::new();
+    let fake_value = 42;
+    for value in users.iter() {
 
-            (AkdLabel(l.to_vec()), AkdValue(v.to_vec()))
-        })
-        .collect()
+        data.push((
+            AkdLabel::from_utf8_str(value),
+            AkdValue(format!("{:?}", value).as_bytes().to_vec()),
+        ));
+    }
+    data
+   
 }

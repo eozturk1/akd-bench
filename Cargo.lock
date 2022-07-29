@@ -30,8 +30,8 @@ dependencies = [
 
 [[package]]
 name = "akd"
-version = "0.7.0"
-source = "git+https://github.com/novifinancial/akd?branch=main#89da4370094e46234924e1efedfcb01633cfb11c"
+version = "0.6.1"
+source = "git+https://github.com/novifinancial/akd?rev=4c6dafa8fc238e802a2828725994b7cb2ade7350#4c6dafa8fc238e802a2828725994b7cb2ade7350"
 dependencies = [
  "async-recursion",
  "async-trait",
@@ -57,6 +57,7 @@ dependencies = [
  "csv",
  "log",
  "mysql_async",
+ "rand 0.8.5",
  "tokio",
  "winter-crypto",
  "winter-math",
@@ -65,8 +66,8 @@ dependencies = [
 
 [[package]]
 name = "akd_mysql"
-version = "0.7.0"
-source = "git+https://github.com/novifinancial/akd?branch=main#89da4370094e46234924e1efedfcb01633cfb11c"
+version = "0.6.1"
+source = "git+https://github.com/novifinancial/akd?rev=4c6dafa8fc238e802a2828725994b7cb2ade7350#4c6dafa8fc238e802a2828725994b7cb2ade7350"
 dependencies = [
  "akd",
  "async-recursion",
