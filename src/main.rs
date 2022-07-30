@@ -25,10 +25,10 @@ const LABEL_VALUE_SIZE_BYTES: usize = 32;
 const LARGE_BATCH_SIZE: u64 = 100000;
 
 /// Number of epochs equal to numebr of publish operations.
-const NUM_EPOCHS: u64 = 101;
+const NUM_EPOCHS: u64 = 1001;
 
 /// csv file name to be prepended for the data
-const CSV_PREFIX: &str = "./output_csvs/ozks_experiment_";
+const CSV_PREFIX: &str = "./output_csvs/ozks_experiment_long_";
 
 #[tokio::main]
 
@@ -49,7 +49,7 @@ pub async fn maybe_publish_multi_epoch(batch_size: u64, num_epoch: u64) {
         Option::from("root"),
         Option::from("example"),
         Option::from(8001),
-        Specific(Duration::new(1200, 0)),
+        Specific(Duration::new(120000, 0)),
         200,
     )
     .await;
