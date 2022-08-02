@@ -744,3 +744,1165 @@ Read call stats: [("get_user_state_versions~", 1)]
 Write call stats: [("internal_batch_set~", 3)]
 
 ***********************************************************
+Elapsed time for publishing keys in range [5300000, 5400000]: 992884 ms.
+Table sizes:
+Table	Size (MB)
+history	3403.92
+users	1310.95
+azks	0.02
+
+MySQL writes: 919456, MySQL reads: 1, Time read: 15.524082125 s, Time write: 688.041425082 s
+	Tree size: 10799999
+	Value state count: 5400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [5400000, 5500000]: 995118 ms.
+Table sizes:
+Table	Size (MB)
+history	3461.92
+users	1333.95
+azks	0.02
+
+MySQL writes: 920662, MySQL reads: 1, Time read: 15.758917291 s, Time write: 687.806151833 s
+	Tree size: 10999999
+	Value state count: 5500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [5500000, 5600000]: 1000292 ms.
+Table sizes:
+Table	Size (MB)
+history	3522.92
+users	1357.95
+azks	0.02
+
+MySQL writes: 923965, MySQL reads: 1, Time read: 15.990499875 s, Time write: 690.446649249 s
+	Tree size: 11199999
+	Value state count: 5600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [5600000, 5700000]: 1003560 ms.
+Table sizes:
+Table	Size (MB)
+history	3583.92
+users	1379.95
+azks	0.02
+
+MySQL writes: 927796, MySQL reads: 1, Time read: 15.744337375 s, Time write: 697.870101833 s
+	Tree size: 11399999
+	Value state count: 5700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [5700000, 5800000]: 1007737 ms.
+Table sizes:
+Table	Size (MB)
+history	3645.92
+users	1402.95
+azks	0.02
+
+MySQL writes: 929417, MySQL reads: 1, Time read: 13.65448625 s, Time write: 700.343088915 s
+	Tree size: 11599999
+	Value state count: 5800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [5800000, 5900000]: 1015835 ms.
+Table sizes:
+Table	Size (MB)
+history	3706.92
+users	1426.95
+azks	0.02
+
+MySQL writes: 932002, MySQL reads: 1, Time read: 15.790132208 s, Time write: 705.702586832 s
+	Tree size: 11799999
+	Value state count: 5900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [5900000, 6000000]: 1015884 ms.
+Table sizes:
+Table	Size (MB)
+history	3767.92
+users	1449.95
+azks	0.02
+
+MySQL writes: 933934, MySQL reads: 1, Time read: 16.098786166 s, Time write: 702.339064373 s
+	Tree size: 11999999
+	Value state count: 6000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6000000, 6100000]: 1054145 ms.
+Table sizes:
+Table	Size (MB)
+history	3828.92
+users	1473.95
+azks	0.02
+
+MySQL writes: 937274, MySQL reads: 1, Time read: 15.935942416 s, Time write: 743.262048457 s
+	Tree size: 12199999
+	Value state count: 6100000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6100000, 6200000]: 1004557 ms.
+Table sizes:
+Table	Size (MB)
+history	3889.92
+users	1497.95
+azks	0.02
+
+MySQL writes: 939557, MySQL reads: 1, Time read: 16.076969875 s, Time write: 699.443930458 s
+	Tree size: 12399999
+	Value state count: 6200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6200000, 6300000]: 1011369 ms.
+Table sizes:
+Table	Size (MB)
+history	3948.92
+users	1519.95
+azks	0.02
+
+MySQL writes: 941475, MySQL reads: 1, Time read: 15.998659916 s, Time write: 699.439899249 s
+	Tree size: 12599999
+	Value state count: 6300000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6300000, 6400000]: 1008788 ms.
+Table sizes:
+Table	Size (MB)
+history	4008.92
+users	1542.95
+azks	0.02
+
+MySQL writes: 942999, MySQL reads: 1, Time read: 15.263667583 s, Time write: 701.463573165 s
+	Tree size: 12799999
+	Value state count: 6400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6400000, 6500000]: 1023719 ms.
+Table sizes:
+Table	Size (MB)
+history	4068.92
+users	1566.95
+azks	0.02
+
+MySQL writes: 945806, MySQL reads: 1, Time read: 15.948443916 s, Time write: 715.071819916 s
+	Tree size: 12999999
+	Value state count: 6500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6500000, 6600000]: 1026659 ms.
+Table sizes:
+Table	Size (MB)
+history	4129.92
+users	1590.95
+azks	0.02
+
+MySQL writes: 948117, MySQL reads: 1, Time read: 15.249387333 s, Time write: 716.901589124 s
+	Tree size: 13199999
+	Value state count: 6600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6600000, 6700000]: 1024820 ms.
+Table sizes:
+Table	Size (MB)
+history	4188.92
+users	1612.95
+azks	0.02
+
+MySQL writes: 950184, MySQL reads: 1, Time read: 16.07229775 s, Time write: 718.321510125 s
+	Tree size: 13399999
+	Value state count: 6700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6700000, 6800000]: 1026056 ms.
+Table sizes:
+Table	Size (MB)
+history	4249.92
+users	1636.95
+azks	0.02
+
+MySQL writes: 951958, MySQL reads: 1, Time read: 15.247416708 s, Time write: 720.858248124 s
+	Tree size: 13599999
+	Value state count: 6800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6800000, 6900000]: 1035976 ms.
+Table sizes:
+Table	Size (MB)
+history	4309.92
+users	1658.95
+azks	0.02
+
+MySQL writes: 954649, MySQL reads: 1, Time read: 15.822915208 s, Time write: 724.166452916 s
+	Tree size: 13799999
+	Value state count: 6900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [6900000, 7000000]: 1032082 ms.
+Table sizes:
+Table	Size (MB)
+history	4369.92
+users	1682.95
+azks	0.02
+
+MySQL writes: 956065, MySQL reads: 1, Time read: 15.93355375 s, Time write: 724.489551874 s
+	Tree size: 13999999
+	Value state count: 7000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7000000, 7100000]: 1041282 ms.
+Table sizes:
+Table	Size (MB)
+history	4428.92
+users	1706.95
+azks	0.02
+
+MySQL writes: 959267, MySQL reads: 1, Time read: 15.65710825 s, Time write: 730.576114791 s
+	Tree size: 14199999
+	Value state count: 7100000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7100000, 7200000]: 1038966 ms.
+Table sizes:
+Table	Size (MB)
+history	4486.92
+users	1730.95
+azks	0.02
+
+MySQL writes: 960886, MySQL reads: 1, Time read: 16.664692541 s, Time write: 728.685204666 s
+	Tree size: 14399999
+	Value state count: 7200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7200000, 7300000]: 1042610 ms.
+Table sizes:
+Table	Size (MB)
+history	4550.92
+users	1753.95
+azks	0.02
+
+MySQL writes: 962215, MySQL reads: 1, Time read: 17.866400625 s, Time write: 730.917708124 s
+	Tree size: 14599999
+	Value state count: 7300000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7300000, 7400000]: 1048552 ms.
+Table sizes:
+Table	Size (MB)
+history	4609.92
+users	1776.95
+azks	0.02
+
+MySQL writes: 965938, MySQL reads: 1, Time read: 17.641901 s, Time write: 733.496259457 s
+	Tree size: 14799999
+	Value state count: 7400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7400000, 7500000]: 1050498 ms.
+Table sizes:
+Table	Size (MB)
+history	4668.92
+users	1798.95
+azks	0.02
+
+MySQL writes: 967014, MySQL reads: 1, Time read: 18.405328875 s, Time write: 736.4354035 s
+	Tree size: 14999999
+	Value state count: 7500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7500000, 7600000]: 1048965 ms.
+Table sizes:
+Table	Size (MB)
+history	4728.92
+users	1821.95
+azks	0.02
+
+MySQL writes: 968126, MySQL reads: 1, Time read: 18.352380125 s, Time write: 736.858407582 s
+	Tree size: 15199999
+	Value state count: 7600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7600000, 7700000]: 1054633 ms.
+Table sizes:
+Table	Size (MB)
+history	4789.92
+users	1843.95
+azks	0.02
+
+MySQL writes: 970714, MySQL reads: 1, Time read: 18.365295582999998 s, Time write: 741.133904749 s
+	Tree size: 15399999
+	Value state count: 7700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7700000, 7800000]: 1058054 ms.
+Table sizes:
+Table	Size (MB)
+history	4849.92
+users	1866.95
+azks	0.02
+
+MySQL writes: 972500, MySQL reads: 1, Time read: 17.870767916 s, Time write: 742.465841875 s
+	Tree size: 15599999
+	Value state count: 7800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7800000, 7900000]: 1057408 ms.
+Table sizes:
+Table	Size (MB)
+history	4909.92
+users	1890.95
+azks	0.02
+
+MySQL writes: 973856, MySQL reads: 1, Time read: 18.325656916 s, Time write: 742.084852374 s
+	Tree size: 15799999
+	Value state count: 7900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [7900000, 8000000]: 1063322 ms.
+Table sizes:
+Table	Size (MB)
+history	4970.92
+users	1913.95
+azks	0.02
+
+MySQL writes: 976021, MySQL reads: 1, Time read: 17.987727916 s, Time write: 748.097310123 s
+	Tree size: 15999999
+	Value state count: 8000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8000000, 8100000]: 1061381 ms.
+Table sizes:
+Table	Size (MB)
+history	5030.92
+users	1935.95
+azks	0.02
+
+MySQL writes: 977866, MySQL reads: 1, Time read: 18.245929166 s, Time write: 747.703567665 s
+	Tree size: 16199999
+	Value state count: 8100000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8100000, 8200000]: 1068013 ms.
+Table sizes:
+Table	Size (MB)
+history	5092.92
+users	1958.95
+azks	0.02
+
+MySQL writes: 979846, MySQL reads: 1, Time read: 18.621563333 s, Time write: 751.478132957 s
+	Tree size: 16399999
+	Value state count: 8200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8200000, 8300000]: 1076343 ms.
+Table sizes:
+Table	Size (MB)
+history	5151.92
+users	1982.95
+azks	0.02
+
+MySQL writes: 982018, MySQL reads: 1, Time read: 18.789952166 s, Time write: 758.857454624 s
+	Tree size: 16599999
+	Value state count: 8300000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8300000, 8400000]: 1075756 ms.
+Table sizes:
+Table	Size (MB)
+history	5212.92
+users	2005.95
+azks	0.02
+
+MySQL writes: 983821, MySQL reads: 1, Time read: 18.670175791 s, Time write: 758.913007833 s
+	Tree size: 16799999
+	Value state count: 8400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8400000, 8500000]: 1083418 ms.
+Table sizes:
+Table	Size (MB)
+history	5271.92
+users	2028.95
+azks	0.02
+
+MySQL writes: 986069, MySQL reads: 1, Time read: 18.844617083 s, Time write: 766.399475625 s
+	Tree size: 16999999
+	Value state count: 8500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8500000, 8600000]: 1081484 ms.
+Table sizes:
+Table	Size (MB)
+history	5330.92
+users	2050.95
+azks	0.02
+
+MySQL writes: 985849, MySQL reads: 1, Time read: 19.066743375 s, Time write: 762.519238665 s
+	Tree size: 17199999
+	Value state count: 8600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8600000, 8700000]: 1082871 ms.
+Table sizes:
+Table	Size (MB)
+history	5392.92
+users	2073.95
+azks	0.02
+
+MySQL writes: 987774, MySQL reads: 1, Time read: 18.904072958 s, Time write: 765.349996248 s
+	Tree size: 17399999
+	Value state count: 8700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8700000, 8800000]: 1088530 ms.
+Table sizes:
+Table	Size (MB)
+history	5452.92
+users	2096.95
+azks	0.02
+
+MySQL writes: 990628, MySQL reads: 1, Time read: 18.8662 s, Time write: 771.091205624 s
+	Tree size: 17599999
+	Value state count: 8800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8800000, 8900000]: 1093854 ms.
+Table sizes:
+Table	Size (MB)
+history	5514.92
+users	2119.95
+azks	0.02
+
+MySQL writes: 991324, MySQL reads: 1, Time read: 19.176604458 s, Time write: 773.850550791 s
+	Tree size: 17799999
+	Value state count: 8900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [8900000, 9000000]: 1093445 ms.
+Table sizes:
+Table	Size (MB)
+history	5575.92
+users	2142.95
+azks	0.02
+
+MySQL writes: 993602, MySQL reads: 1, Time read: 19.86512125 s, Time write: 773.327278666 s
+	Tree size: 17999999
+	Value state count: 9000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9000000, 9100000]: 1097961 ms.
+Table sizes:
+Table	Size (MB)
+history	5635.92
+users	2166.95
+azks	0.02
+
+MySQL writes: 994619, MySQL reads: 1, Time read: 18.972051208 s, Time write: 778.384932291 s
+	Tree size: 18199999
+	Value state count: 9100000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9100000, 9200000]: 1108965 ms.
+Table sizes:
+Table	Size (MB)
+history	5696.92
+users	2189.95
+azks	0.02
+
+MySQL writes: 996738, MySQL reads: 1, Time read: 19.449066791 s, Time write: 786.993362708 s
+	Tree size: 18399999
+	Value state count: 9200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9200000, 9300000]: 1102859 ms.
+Table sizes:
+Table	Size (MB)
+history	5759.92
+users	2213.95
+azks	0.02
+
+MySQL writes: 998502, MySQL reads: 1, Time read: 19.539072625 s, Time write: 782.457716916 s
+	Tree size: 18599999
+	Value state count: 9300000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9300000, 9400000]: 1108573 ms.
+Table sizes:
+Table	Size (MB)
+history	5820.92
+users	2237.95
+azks	0.02
+
+MySQL writes: 999056, MySQL reads: 1, Time read: 19.814294958 s, Time write: 782.653891666 s
+	Tree size: 18799999
+	Value state count: 9400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9400000, 9500000]: 1102756 ms.
+Table sizes:
+Table	Size (MB)
+history	5881.92
+users	2261.95
+azks	0.02
+
+MySQL writes: 1000431, MySQL reads: 1, Time read: 19.420415708 s, Time write: 783.432412875 s
+	Tree size: 18999999
+	Value state count: 9500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9500000, 9600000]: 1107282 ms.
+Table sizes:
+Table	Size (MB)
+history	5941.92
+users	2284.95
+azks	0.02
+
+MySQL writes: 1002628, MySQL reads: 1, Time read: 19.74992775 s, Time write: 786.325619749 s
+	Tree size: 19199999
+	Value state count: 9600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9600000, 9700000]: 1118764 ms.
+Table sizes:
+Table	Size (MB)
+history	6001.92
+users	2307.95
+azks	0.02
+
+MySQL writes: 1003433, MySQL reads: 1, Time read: 19.860234083 s, Time write: 797.660384707 s
+	Tree size: 19399999
+	Value state count: 9700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9700000, 9800000]: 1145957 ms.
+Table sizes:
+Table	Size (MB)
+history	6065.92
+users	2329.95
+azks	0.02
+
+MySQL writes: 1005347, MySQL reads: 1, Time read: 19.7778645 s, Time write: 797.017586165 s
+	Tree size: 19599999
+	Value state count: 9800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9800000, 9900000]: 1143183 ms.
+Table sizes:
+Table	Size (MB)
+history	6126.92
+users	2352.95
+azks	0.02
+
+MySQL writes: 1006963, MySQL reads: 1, Time read: 18.961197291 s, Time write: 800.050800791 s
+	Tree size: 19799999
+	Value state count: 9900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [9900000, 10000000]: 1155383 ms.
+Table sizes:
+Table	Size (MB)
+history	6185.92
+users	2374.95
+azks	0.02
+
+MySQL writes: 1007819, MySQL reads: 1, Time read: 19.846995208 s, Time write: 806.262753207 s
+	Tree size: 19999999
+	Value state count: 10000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10000000, 10100000]: 1144927 ms.
+Table sizes:
+Table	Size (MB)
+history	6245.92
+users	2397.95
+azks	0.02
+
+MySQL writes: 1009645, MySQL reads: 1, Time read: 18.986570666 s, Time write: 801.538850374 s
+	Tree size: 20199999
+	Value state count: 10100000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10100000, 10200000]: 1150582 ms.
+Table sizes:
+Table	Size (MB)
+history	6305.92
+users	2421.95
+azks	0.02
+
+MySQL writes: 1010772, MySQL reads: 1, Time read: 19.419067375 s, Time write: 805.993336083 s
+	Tree size: 20399999
+	Value state count: 10200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10200000, 10300000]: 1154142 ms.
+Table sizes:
+Table	Size (MB)
+history	6364.92
+users	2444.95
+azks	0.02
+
+MySQL writes: 1012259, MySQL reads: 1, Time read: 19.952718041 s, Time write: 809.86147504 s
+	Tree size: 20599999
+	Value state count: 10300000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10300000, 10400000]: 1158626 ms.
+Table sizes:
+Table	Size (MB)
+history	6426.92
+users	2467.95
+azks	0.02
+
+MySQL writes: 1013189, MySQL reads: 1, Time read: 19.764571125 s, Time write: 812.591462207 s
+	Tree size: 20799999
+	Value state count: 10400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10400000, 10500000]: 1157979 ms.
+Table sizes:
+Table	Size (MB)
+history	6486.92
+users	2492.95
+azks	0.02
+
+MySQL writes: 1015620, MySQL reads: 1, Time read: 19.835780583000002 s, Time write: 811.080094873 s
+	Tree size: 20999999
+	Value state count: 10500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10500000, 10600000]: 1174592 ms.
+Table sizes:
+Table	Size (MB)
+history	6545.92
+users	2516.95
+azks	0.02
+
+MySQL writes: 1016737, MySQL reads: 1, Time read: 19.181638666 s, Time write: 823.828181791 s
+	Tree size: 21199999
+	Value state count: 10600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10600000, 10700000]: 1163522 ms.
+Table sizes:
+Table	Size (MB)
+history	6606.92
+users	2538.95
+azks	0.02
+
+MySQL writes: 1018671, MySQL reads: 1, Time read: 19.813986083 s, Time write: 816.008592 s
+	Tree size: 21399999
+	Value state count: 10700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10700000, 10800000]: 1166827 ms.
+Table sizes:
+Table	Size (MB)
+history	6668.92
+users	2562.95
+azks	0.02
+
+MySQL writes: 1019370, MySQL reads: 1, Time read: 19.82578675 s, Time write: 819.454653666 s
+	Tree size: 21599999
+	Value state count: 10800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10800000, 10900000]: 1166487 ms.
+Table sizes:
+Table	Size (MB)
+history	6728.92
+users	2586.95
+azks	0.02
+
+MySQL writes: 1020055, MySQL reads: 1, Time read: 20.321375291 s, Time write: 821.157824749 s
+	Tree size: 21799999
+	Value state count: 10900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [10900000, 11000000]: 1173278 ms.
+Table sizes:
+Table	Size (MB)
+history	6789.92
+users	2609.95
+azks	0.02
+
+MySQL writes: 1021492, MySQL reads: 1, Time read: 19.844555083 s, Time write: 826.079838958 s
+	Tree size: 21999999
+	Value state count: 11000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11000000, 11100000]: 1174417 ms.
+Table sizes:
+Table	Size (MB)
+history	6850.92
+users	2633.95
+azks	0.02
+
+MySQL writes: 1023835, MySQL reads: 1, Time read: 20.2842035 s, Time write: 824.094524999 s
+	Tree size: 22199999
+	Value state count: 11100000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11100000, 11200000]: 1175787 ms.
+Table sizes:
+Table	Size (MB)
+history	6909.92
+users	2656.95
+azks	0.02
+
+MySQL writes: 1024278, MySQL reads: 1, Time read: 19.593935291 s, Time write: 827.945199332 s
+	Tree size: 22399999
+	Value state count: 11200000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11200000, 11300000]: 1181833 ms.
+Table sizes:
+Table	Size (MB)
+history	6971.92
+users	2680.95
+azks	0.02
+
+MySQL writes: 1024983, MySQL reads: 1, Time read: 19.872874958 s, Time write: 832.644782373 s
+	Tree size: 22599999
+	Value state count: 11300000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11300000, 11400000]: 1179058 ms.
+Table sizes:
+Table	Size (MB)
+history	7032.92
+users	2704.95
+azks	0.02
+
+MySQL writes: 1026711, MySQL reads: 1, Time read: 20.413713375 s, Time write: 827.222123249 s
+	Tree size: 22799999
+	Value state count: 11400000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11400000, 11500000]: 1178182 ms.
+Table sizes:
+Table	Size (MB)
+history	7091.92
+users	2728.95
+azks	0.02
+
+MySQL writes: 1028000, MySQL reads: 1, Time read: 20.062397916 s, Time write: 830.685992999 s
+	Tree size: 22999999
+	Value state count: 11500000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11500000, 11600000]: 1190112 ms.
+Table sizes:
+Table	Size (MB)
+history	7152.92
+users	2750.95
+azks	0.02
+
+MySQL writes: 1030784, MySQL reads: 1, Time read: 20.131041458 s, Time write: 841.614064666 s
+	Tree size: 23199999
+	Value state count: 11600000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11600000, 11700000]: 1186723 ms.
+Table sizes:
+Table	Size (MB)
+history	7212.92
+users	2775.95
+azks	0.02
+
+MySQL writes: 1031232, MySQL reads: 1, Time read: 20.597623291 s, Time write: 838.097588998 s
+	Tree size: 23399999
+	Value state count: 11700000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11700000, 11800000]: 1193630 ms.
+Table sizes:
+Table	Size (MB)
+history	7271.92
+users	2797.95
+azks	0.02
+
+MySQL writes: 1032814, MySQL reads: 1, Time read: 19.924237833 s, Time write: 840.513481499 s
+	Tree size: 23599999
+	Value state count: 11800000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11800000, 11900000]: 1188797 ms.
+Table sizes:
+Table	Size (MB)
+history	7330.92
+users	2821.95
+azks	0.02
+
+MySQL writes: 1032956, MySQL reads: 1, Time read: 20.000695875 s, Time write: 838.625304499 s
+	Tree size: 23799999
+	Value state count: 11900000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [11900000, 12000000]: 1193918 ms.
+Table sizes:
+Table	Size (MB)
+history	7390.92
+users	2844.95
+azks	0.02
+
+MySQL writes: 1034447, MySQL reads: 1, Time read: 21.351788833 s, Time write: 841.387049916 s
+	Tree size: 23999999
+	Value state count: 12000000
+Read call stats: [("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12000000, 12100000]: 1197940 ms.
+Table sizes:
+Table	Size (MB)
+history	7451.92
+users	2867.95
+azks	0.02
+
+MySQL writes: 1035962, MySQL reads: 7, Time read: 21.07637054 s, Time write: 844.047586666 s
+	Tree size: 24199999
+	Value state count: 12100000
+Read call stats: [("batch_get~TreeNode", 6), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12100000, 12200000]: 1205468 ms.
+Table sizes:
+Table	Size (MB)
+history	7511.92
+users	2890.95
+azks	0.02
+
+MySQL writes: 1037024, MySQL reads: 8, Time read: 21.567529665 s, Time write: 848.228910248 s
+	Tree size: 24399999
+	Value state count: 12200000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12200000, 12300000]: 1206460 ms.
+Table sizes:
+Table	Size (MB)
+history	7569.92
+users	2914.95
+azks	0.02
+
+MySQL writes: 1038505, MySQL reads: 7, Time read: 21.25039679 s, Time write: 851.423505582 s
+	Tree size: 24599999
+	Value state count: 12300000
+Read call stats: [("batch_get~TreeNode", 6), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12300000, 12400000]: 1214298 ms.
+Table sizes:
+Table	Size (MB)
+history	7630.92
+users	2937.95
+azks	0.02
+
+MySQL writes: 1039136, MySQL reads: 8, Time read: 22.074188622 s, Time write: 854.566925416 s
+	Tree size: 24799999
+	Value state count: 12400000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12400000, 12500000]: 1209754 ms.
+Table sizes:
+Table	Size (MB)
+history	7690.92
+users	2959.95
+azks	0.02
+
+MySQL writes: 1040531, MySQL reads: 8, Time read: 22.369429789 s, Time write: 853.002436332 s
+	Tree size: 24999999
+	Value state count: 12500000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12500000, 12600000]: 1221573 ms.
+Table sizes:
+Table	Size (MB)
+history	7751.92
+users	2984.95
+azks	0.02
+
+MySQL writes: 1041243, MySQL reads: 8, Time read: 22.526332163 s, Time write: 860.167380958 s
+	Tree size: 25199999
+	Value state count: 12600000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12600000, 12700000]: 1227827 ms.
+Table sizes:
+Table	Size (MB)
+history	7811.92
+users	3008.95
+azks	0.02
+
+MySQL writes: 1042548, MySQL reads: 9, Time read: 23.404849122 s, Time write: 862.990939249 s
+	Tree size: 25399999
+	Value state count: 12700000
+Read call stats: [("batch_get~TreeNode", 8), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12700000, 12800000]: 1216809 ms.
+Table sizes:
+Table	Size (MB)
+history	7872.92
+users	3030.95
+azks	0.02
+
+MySQL writes: 1043564, MySQL reads: 8, Time read: 23.156907914 s, Time write: 856.997720708 s
+	Tree size: 25599999
+	Value state count: 12800000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12800000, 12900000]: 1223464 ms.
+Table sizes:
+Table	Size (MB)
+history	7932.92
+users	3054.95
+azks	0.02
+
+MySQL writes: 1044971, MySQL reads: 8, Time read: 23.593082539 s, Time write: 864.486974541 s
+	Tree size: 25799999
+	Value state count: 12900000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [12900000, 13000000]: 1226706 ms.
+Table sizes:
+Table	Size (MB)
+history	7992.92
+users	3077.95
+azks	0.02
+
+MySQL writes: 1045504, MySQL reads: 9, Time read: 24.29705908 s, Time write: 863.132610707 s
+	Tree size: 25999999
+	Value state count: 13000000
+Read call stats: [("batch_get~TreeNode", 8), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [13000000, 13100000]: 1227237 ms.
+Table sizes:
+Table	Size (MB)
+history	8052.92
+users	3101.95
+azks	0.02
+
+MySQL writes: 1047443, MySQL reads: 8, Time read: 24.538131123 s, Time write: 865.901650207 s
+	Tree size: 26199999
+	Value state count: 13100000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [13100000, 13200000]: 1234371 ms.
+Table sizes:
+Table	Size (MB)
+history	8114.92
+users	3125.95
+azks	0.02
+
+MySQL writes: 1048569, MySQL reads: 8, Time read: 24.618399373 s, Time write: 866.895629082 s
+	Tree size: 26399999
+	Value state count: 13200000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [13200000, 13300000]: 1237702 ms.
+Table sizes:
+Table	Size (MB)
+history	8174.92
+users	3149.95
+azks	0.02
+
+MySQL writes: 1049789, MySQL reads: 9, Time read: 26.337048996 s, Time write: 868.716317332 s
+	Tree size: 26599999
+	Value state count: 13300000
+Read call stats: [("batch_get~TreeNode", 8), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [13300000, 13400000]: 1237704 ms.
+Table sizes:
+Table	Size (MB)
+history	8236.92
+users	3171.95
+azks	0.02
+
+MySQL writes: 1050688, MySQL reads: 9, Time read: 25.522647829 s, Time write: 869.701375333 s
+	Tree size: 26799999
+	Value state count: 13400000
+Read call stats: [("batch_get~TreeNode", 8), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [13400000, 13500000]: 1238370 ms.
+Table sizes:
+Table	Size (MB)
+history	8298.92
+users	3194.95
+azks	0.02
+
+MySQL writes: 1051242, MySQL reads: 9, Time read: 26.599657664 s, Time write: 869.857548374 s
+	Tree size: 26999999
+	Value state count: 13500000
+Read call stats: [("batch_get~TreeNode", 8), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
+Elapsed time for publishing keys in range [13500000, 13600000]: 1244844 ms.
+Table sizes:
+Table	Size (MB)
+history	8357.92
+users	3217.95
+azks	0.02
+
+MySQL writes: 1052982, MySQL reads: 8, Time read: 27.209002957 s, Time write: 873.670093499 s
+	Tree size: 27199999
+	Value state count: 13600000
+Read call stats: [("batch_get~TreeNode", 7), ("get_user_state_versions~", 1)]
+Write call stats: [("internal_batch_set~", 3)]
+
+***********************************************************
